@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burak Ege Kaya — AI/ML Engineer</title>
+    <meta
+      name="description"
+      content="Computer Engineering student transitioning into AI/ML Engineering. Full-stack background, real-world AI projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Toast Banner -->
+    <div id="toast" class="toast" role="alert" aria-live="polite">
+      <span id="toast-icon" class="toast-icon">✓</span>
+      <span id="toast-msg"></span>
+    </div>
+
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">Burak Ege Kaya</a>
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li>
+            <a href="#experience" data-i18n="nav_experience">Experience</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-cta" data-i18n="nav_contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="lang-toggle">
+          <button
+            class="lang-btn active"
+            data-lang="en"
+            onclick="setLang('en')"
+            title="English"
+          >
+            🇬🇧
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="tr"
+            onclick="setLang('tr')"
+            title="Türkçe"
+          >
+            🇹🇷
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-eyebrow reveal" data-i18n="hero_eyebrow">
+              Kadıköy, Istanbul · Open to Opportunities
+            </div>
+            <h1
+              class="hero-title reveal reveal-delay-1"
+              data-i18n-html="hero_title_html"
+            >
+              Full-stack roots.<br /><em>AI/ML destination.</em>
+            </h1>
+            <p
+              class="hero-bio reveal reveal-delay-2"
+              data-i18n-html="hero_bio_html"
+            >
+              I started by <strong>building products</strong>: deployed
+              full-stack apps, real-time systems, mobile apps. Then, during an
+              internship, a mentor showed me the AI side. I never looked back.
+              Now I am an <strong>AI Engineering trainee</strong> (top 120 from
+              8,000+ applicants), building RL agents, completing an NLP capstone
+              on Turkish dialogue, and I can still ship the backend.
+            </p>
+            <div class="hero-actions reveal reveal-delay-3">
+              <a href="#projects" class="btn-primary">
+                <span data-i18n="hero_btn_projects">View Projects</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path
+                    d="M2 7h10M7 2l5 5-5 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a
+                href="CV_without_phone_number.pdf"
+                download
+                class="btn-ghost"
+                data-i18n="hero_btn_cv"
+                >Download CV</a
+              >
+              <a href="#contact" class="btn-ghost" data-i18n="hero_btn_contact"
+                >Contact</a
+              >
+            </div>
+          </div>
+
+          <div class="hero-card reveal reveal-delay-2">
+            <div class="hero-card-badge" data-i18n="hero_badge">
+              Open to Opportunities
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">120</div>
+              <div class="hero-stat-label" data-i18n="hero_stat1_label">
+                Milli Teknoloji Akademisi
+              </div>
+              <div class="hero-stat-sub" data-i18n="hero_stat1_sub">
+                Top 120 from 8,000+ applicants
+              </div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">1.500</div>
+              <div class="hero-stat-label" data-i18n="hero_stat2_label">
+                Yapay Zeka Akademisi
+              </div>
+              <div class="hero-stat-sub" data-i18n="hero_stat2_sub">
+                Selected from 31,700 applicants
+              </div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">5+</div>
+              <div class="hero-stat-label" data-i18n="hero_stat3_label">
+                Projects Shipped
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--About and Skills-->
+    <section id="about">
+      <div class="container">
+        <div class="section-label reveal" data-i18n="about_label">About</div>
+        <h2
+          class="section-title reveal reveal-delay-1"
+          data-i18n-html="about_title_html"
+        >
+          From shipping products<br />to <em>teaching machines.</em>
+        </h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p data-i18n-html="about_p1_html">
+              I started as a <strong>full-stack developer</strong>: building
+              real products, learning how systems work end-to-end. That
+              foundation gave me something most ML engineers lack: I can ship.
+            </p>
+            <p data-i18n-html="about_p2_html">
+              During my internship at <strong>Çizgi Teknoloji</strong>, I worked
+              alongside an AI Research Engineer who redirected my entire
+              trajectory. The problems I found most compelling were all on the
+              AI side: autonomous systems, language models, intelligent
+              pipelines.
+            </p>
+            <p data-i18n-html="about_p3_html">
+              I am a <strong>double major</strong> at Bahçeşehir University
+              (Computer Engineering + Management Engineering), advancing through
+              two competitive national AI programs, and looking for a team where
+              I can contribute to real AI/ML work.
+            </p>
+            <p style="margin-top: 8px">
+              <span
+                style="
+                  font-family: var(--mono);
+                  font-size: 11px;
+                  color: var(--ink-soft);
+                "
+                >English C1 · Turkish Native · German A1</span
+              >
+            </p>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <div class="skills-header" data-i18n="skills_header">
+              Skills &amp; Technologies
+            </div>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-card-label" data-i18n="skill_ai">
+                  AI &amp; Data
+                </div>
+                <div class="skill-tags">
+                  <span class="skill-tag">NumPy</span
+                  ><span class="skill-tag">Pandas</span>
+                  <span class="skill-tag">Matplotlib</span
+                  ><span class="skill-tag">Scikit-learn</span>
+                  <span class="skill-tag">Stable Baselines3</span
+                  ><span class="skill-tag">Gemini API</span>
+                  <span class="skill-tag">OpenAI API</span>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card-label" data-i18n="skill_lang">
+                  Languages
+                </div>
+                <div class="skill-tags">
+                  <span class="skill-tag">Python</span
+                  ><span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">Java</span
+                  ><span class="skill-tag">C#</span>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card-label">Frontend</div>
+                <div class="skill-tags">
+                  <span class="skill-tag">React</span
+                  ><span class="skill-tag">HTML</span>
+                  <span class="skill-tag">CSS</span>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card-label" data-i18n="skill_backend">
+                  Backend &amp; DB
+                </div>
+                <div class="skill-tags">
+                  <span class="skill-tag">FastAPI</span
+                  ><span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">.NET</span
+                  ><span class="skill-tag">MySQL</span>
+                  <span class="skill-tag">MongoDB</span
+                  ><span class="skill-tag">Oracle DB</span>
+                </div>
+              </div>
+              <div class="skill-card wide">
+                <div class="skill-card-label" data-i18n="skill_devops">
+                  DevOps, Realtime &amp; Tools
+                </div>
+                <div class="skill-tags">
+                  <span class="skill-tag">Docker</span
+                  ><span class="skill-tag">Git</span>
+                  <span class="skill-tag">AWS S3</span
+                  ><span class="skill-tag">Socket.IO</span>
+                  <span class="skill-tag">WebRTC</span
+                  ><span class="skill-tag">Google Colab</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="projects-header">
+          <div>
+            <div class="section-label reveal" data-i18n="projects_label">
+              Projects
+            </div>
+            <h2
+              class="section-title reveal reveal-delay-1"
+              data-i18n-html="projects_title_html"
+            >
+              Things I've built,<br /><em>broken, and learned from.</em>
+            </h2>
+          </div>
+          <a
+            href="https://github.com/burakkeynz"
+            target="_blank"
+            class="btn-ghost reveal"
+          >
+            <span data-i18n="github_all">All on GitHub</span>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path
+                d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card featured reveal">
+            <div class="project-meta">
+              <span class="project-tag">Reinforcement Learning</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-title">Autonomous Driving via Deep RL</div>
+            <p class="project-desc" data-i18n="proj1_desc">
+              DQN and SAC algorithms across four simulation environments
+              (Highway, Merge, Roundabout, Racetrack). Reward functions
+              optimized for a zero-collision policy, high-speed navigation and
+              strategic merging.
+            </p>
+            <div class="project-stack">
+              <span class="stack-item">Python</span
+              ><span class="stack-item">Stable Baselines3</span>
+              <span class="stack-item">highway-env</span
+              ><span class="stack-item">DQN</span>
+              <span class="stack-item">SAC</span
+              ><span class="stack-item">Google Colab</span>
+            </div>
+            <a
+              href="https://github.com/burakkeynz/highway-env-project"
+              target="_blank"
+              class="project-link"
+            >
+              <span data-i18n="proj_github_link">View on GitHub</span>
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path
+                  d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-meta">
+              <span class="project-tag">Full Stack · AI</span
+              ><span class="project-year">2025</span>
+            </div>
+            <div class="project-title">Hospital Panel System</div>
+            <p class="project-desc" data-i18n="proj2_desc">
+              Real-time hospital communication platform, full-stack owner across
+              all modules. React/Redux + FastAPI, Socket.IO, WebRTC, Gemini 2.5
+              AI assistant, live speech-to-text via AudioWorklet (48→16 kHz +
+              VAD), JWT auth, AWS S3, encrypted PDF exports.
+            </p>
+            <div class="project-stack">
+              <span class="stack-item">React</span
+              ><span class="stack-item">FastAPI</span>
+              <span class="stack-item">Gemini 2.5</span
+              ><span class="stack-item">WebRTC</span>
+              <span class="stack-item">Socket.IO</span
+              ><span class="stack-item">AWS S3</span>
+            </div>
+            <a
+              href="https://github.com/burakkeynz/HospitalPanelSystem"
+              target="_blank"
+              class="project-link"
+              >GitHub
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path
+                  d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </div>
+
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-meta">
+              <span class="project-tag" data-i18n="tag_deployed"
+                >Deployed Product</span
+              ><span class="project-year">2025</span>
+            </div>
+            <div class="project-title">Chovora</div>
+            <p class="project-desc" data-i18n="proj3_desc">
+              Full technical ownership in a cross-functional team. JWT auth,
+              dynamic cart, admin dashboard. Deployed on Render &amp; Vercel,
+              iterated on UX alongside non-technical teammates.
+            </p>
+            <div class="project-stack">
+              <span class="stack-item">Node.js</span
+              ><span class="stack-item">Express</span>
+              <span class="stack-item">MongoDB</span
+              ><span class="stack-item">React</span>
+            </div>
+            <a href="https://chovora.com" target="_blank" class="project-link"
+              >chovora.com
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path
+                  d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-meta">
+              <span class="project-tag">Mobile · AI</span
+              ><span class="project-year">2024</span>
+            </div>
+            <div class="project-title">Android Chat App</div>
+            <p class="project-desc" data-i18n="proj4_desc">
+              Android chat application integrating OpenAI API (ChatGPT) for
+              real-time conversation. Developed all activity classes:
+              MainActivity, User, UI and logic layers, focusing on API bindings
+              and data flow.
+            </p>
+            <div class="project-stack">
+              <span class="stack-item">Java</span
+              ><span class="stack-item">Android Studio</span
+              ><span class="stack-item">OpenAI API</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-meta">
+              <span class="project-tag">Full Stack</span
+              ><span class="project-year">2025</span>
+            </div>
+            <div class="project-title">Todo Web App</div>
+            <p class="project-desc" data-i18n="proj5_desc">
+              Independent full-stack task manager: auth, CRUD, image upload,
+              fully responsive. React frontend, FastAPI backend, MySQL, JWT
+              authentication.
+            </p>
+            <div class="project-stack">
+              <span class="stack-item">React</span
+              ><span class="stack-item">FastAPI</span>
+              <span class="stack-item">MySQL</span
+              ><span class="stack-item">JWT</span>
+            </div>
+            <a
+              href="https://github.com/burakkeynz/TodoApp"
+              target="_blank"
+              class="project-link"
+              >GitHub
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path
+                  d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-label reveal" data-i18n="exp_label">Experience</div>
+        <h2
+          class="section-title reveal reveal-delay-1"
+          data-i18n-html="exp_title_html"
+        >
+          Where I've been,<br /><em>what I've learned.</em>
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-left">
+              <div class="timeline-date">
+                Jan 2026 — <span data-i18n="present">Present</span>
+              </div>
+              <div class="timeline-org">
+                Ministry of Industry &amp; Technology
+              </div>
+            </div>
+            <div class="timeline-right">
+              <div class="timeline-role" data-i18n="exp1_role">
+                AI Trainee — Milli Teknoloji Akademisi
+              </div>
+              <p class="timeline-desc" data-i18n="exp1_desc">
+                Admitted to the AI Specialization Program, top 120 from 8,000+
+                applicants after intensive foundational screening (Data
+                Structures, OS, DBMS). Focusing on Advanced Python, Cloud
+                Systems, GPU Accelerators, and Parallel Programming. Capstone
+                project under industry mentorship.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Advanced Python</span
+                ><span class="timeline-tag">Cloud Systems</span>
+                <span class="timeline-tag">GPU / Parallel</span
+                ><span class="timeline-tag">AI Specialization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-left">
+              <div class="timeline-date">
+                Dec 2025 — <span data-i18n="present">Present</span>
+              </div>
+              <div class="timeline-org">Yapay Zeka ve Teknoloji Akademisi</div>
+            </div>
+            <div class="timeline-right">
+              <div class="timeline-role" data-i18n="exp2_role">AI Trainee</div>
+              <p class="timeline-desc" data-i18n="exp2_desc">
+                Selected as one of 1,500 participants from 31,700 applicants.
+                National AI program supported by Ministry of Industry and
+                Technology, Google Türkiye, and T3 Foundation.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Google Türkiye</span
+                ><span class="timeline-tag">T3 Foundation</span
+                ><span class="timeline-tag">AI Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-left">
+              <div class="timeline-date">Jul — Aug 2025</div>
+              <div class="timeline-org">Çizgi Teknoloji</div>
+            </div>
+            <div class="timeline-right">
+              <div class="timeline-role" data-i18n="exp3_role">
+                Software Development Intern
+              </div>
+              <p class="timeline-desc" data-i18n="exp3_desc">
+                Built a full-fledged hospital communication panel under senior
+                R&amp;D mentorship. Real-time features with React, FastAPI,
+                WebRTC, Socket.IO. Integrated Gemini 2.5 with live audio
+                transcription (AudioWorklet, VAD). Delivered a production-ready
+                demo.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">React</span
+                ><span class="timeline-tag">FastAPI</span>
+                <span class="timeline-tag">WebRTC</span
+                ><span class="timeline-tag">Gemini 2.5</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-left">
+              <div class="timeline-date">Jul — Sep 2024</div>
+              <div class="timeline-org">Kaan Havalı Kırıcı Makina</div>
+            </div>
+            <div class="timeline-right">
+              <div class="timeline-role" data-i18n="exp4_role">
+                Data Analyst Intern
+              </div>
+              <p class="timeline-desc" data-i18n="exp4_desc">
+                Used Python's Pandas, Matplotlib and NumPy to generate plots of
+                company data. Created SQL tables from MySQL Workbench. Worked on
+                HTML, CSS and JavaScript for internal web interfaces.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Python</span
+                ><span class="timeline-tag">Django</span>
+                <span class="timeline-tag">Pandas</span
+                ><span class="timeline-tag">Data Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-left">
+              <div class="timeline-date">
+                2022 — <span data-i18n="present">Present</span>
+              </div>
+              <div class="timeline-org">Bahçeşehir University</div>
+            </div>
+            <div class="timeline-right">
+              <div class="timeline-role" data-i18n="exp5_role">
+                BSc Computer Engineering + Management Engineering
+              </div>
+              <p class="timeline-desc" data-i18n="exp5_desc">
+                Double major: technical depth in CE (GPA 3.14) with systems
+                thinking from ME (GPA 3.43). Capstone: Turkish dialogue NLP with
+                BERTurk + Whisper. Core team member, BAU Management Engineering
+                Club.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag" data-i18n="tag_doublemajor"
+                  >Double Major</span
+                >
+                <span class="timeline-tag">GPA 3.14 / 3.43</span>
+                <span class="timeline-tag">Capstone: NLP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-inner">
+          <div>
+            <div class="section-label reveal" data-i18n="contact_label">
+              Contact
+            </div>
+            <h2
+              class="section-title reveal reveal-delay-1"
+              data-i18n-html="contact_title_html"
+            >
+              Let's build<br /><em>something together.</em>
+            </h2>
+            <p
+              class="section-desc reveal reveal-delay-2"
+              data-i18n="contact_desc"
+            >
+              Open to AI/ML Engineering roles, Data Science positions, and
+              interesting conversations. Based in Istanbul, open to hybrid and
+              remote.
+            </p>
+            <div class="contact-links reveal reveal-delay-3">
+              <a
+                href="https://linkedin.com/in/burak-ege-kaya"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-link-icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M2 3.5C2 2.67 2.67 2 3.5 2S5 2.67 5 3.5 4.33 5 3.5 5 2 4.33 2 3.5zM2 6.5h3v7H2v-7zm4.5 0H9v1c.4-.7 1.2-1.2 2.1-1.2C13 6.3 14 7.5 14 9.7v3.8h-3v-3.3c0-.9-.3-1.5-1.1-1.5-.6 0-1 .4-1.1 1-.05.2-.05.4-.05.6v3.2H6.5v-7z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">LinkedIn</div>
+                  <div class="contact-link-value">
+                    linkedin.com/in/burak-ege-kaya
+                  </div>
+                </div>
+                <svg
+                  class="contact-link-arrow"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M3 8h10M8 3l5 5-5 5"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/burakkeynz"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-link-icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M8 1C4.13 1 1 4.13 1 8c0 3.09 2 5.71 4.79 6.63.35.06.48-.15.48-.34v-1.2c-1.95.42-2.36-.94-2.36-.94-.32-.81-.78-1.02-.78-1.02-.64-.43.05-.43.05-.43.7.05 1.07.72 1.07.72.62 1.07 1.64.76 2.04.58.06-.45.24-.76.44-.94-1.56-.18-3.2-.78-3.2-3.47 0-.77.27-1.39.72-1.88-.07-.18-.31-.89.07-1.85 0 0 .59-.19 1.92.72A6.6 6.6 0 018 4.8c.59 0 1.19.08 1.75.24 1.33-.91 1.92-.72 1.92-.72.38.96.14 1.67.07 1.85.45.49.72 1.11.72 1.88 0 2.7-1.64 3.29-3.2 3.47.25.22.48.65.48 1.31v1.94c0 .19.13.4.49.34C13 13.71 15 11.09 15 8c0-3.87-3.13-7-7-7z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">GitHub</div>
+                  <div class="contact-link-value">github.com/burakkeynz</div>
+                </div>
+                <svg
+                  class="contact-link-arrow"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M3 8h10M8 3l5 5-5 5"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="mailto:burak.kaya3@bahcesehir.edu.tr"
+                class="contact-link"
+              >
+                <div class="contact-link-icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <rect
+                      x="2"
+                      y="4"
+                      width="12"
+                      height="9"
+                      rx="1.5"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      d="M2 5l6 4.5L14 5"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-link-info">
+                  <div
+                    class="contact-link-label"
+                    data-i18n="contact_email_label"
+                  >
+                    Email
+                  </div>
+                  <div class="contact-link-value">
+                    burak.kaya3@bahcesehir.edu.tr
+                  </div>
+                </div>
+                <svg
+                  class="contact-link-arrow"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M3 8h10M8 3l5 5-5 5"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <p class="form-section-title" data-i18n="form_title">
+              Send a Message
+            </p>
+            <form class="contact-form" id="contact-form" novalidate>
+              <!-- Spam honeypot: botlar doldurur, insanlar doldurmaz -->
+              <input
+                type="text"
+                name="_honey"
+                style="display: none"
+                tabindex="-1"
+                autocomplete="off"
+              />
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_name"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="f-name"
+                  class="form-input"
+                  data-i18n-placeholder="form_name_ph"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_email_label"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="f-email"
+                  class="form-input"
+                  data-i18n-placeholder="form_email_ph"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_message"
+                  >Message</label
+                >
+                <textarea
+                  name="message"
+                  id="f-message"
+                  class="form-textarea"
+                  data-i18n-placeholder="form_message_ph"
+                  placeholder="What's on your mind?"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="form-submit-btn">
+                <span id="submit-label" data-i18n="form_submit">Send</span>
+                <svg
+                  id="submit-arrow"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                >
+                  <path
+                    d="M2 7h10M7 2l5 5-5 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  id="submit-spinner"
+                  class="spinner hidden"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <circle
+                    cx="8"
+                    cy="8"
+                    r="6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-dasharray="28"
+                    stroke-dashoffset="10"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-logo">Burak Ege Kaya</span>
+          <span class="footer-copy" data-i18n="footer_copy"
+            >© 2026 · burakegekaya.com</span
+          >
+          <div class="footer-links">
+            <a href="https://github.com/burakkeynz" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/burak-ege-kaya" target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
