@@ -1,4 +1,4 @@
-// =================== TRANSLATIONS ===================
+//Translations
 const t = {
   en: {
     nav_about: "About",
@@ -341,7 +341,7 @@ if (form) {
       if (res.ok) {
         recordSubmission();
         showToast("success");
-        form.style.display = "none";
+        form.reset();
       } else {
         showToast("error");
         submitBtn.disabled = false;
@@ -359,3 +359,36 @@ if (form) {
 
 // Init with default lang
 setLang("en");
+
+//Dynamic Title
+const sections = document.querySelectorAll("section[id]");
+const titles = {
+  en: {
+    hero: "Burak Ege Kaya — Computer Engineer",
+    about: "About",
+    projects: "Projects",
+    experience: "Experience",
+    contact: "Contact",
+  },
+  tr: {
+    hero: "Burak Ege Kaya — Bilgisayar Mühendisi",
+    about: "Hakkımda — Burak Ege Kaya",
+    projects: "Projeler — Burak Ege Kaya",
+    experience: "Deneyim — Burak Ege Kaya",
+    contact: "İletişim — Burak Ege Kaya",
+  },
+};
+
+const titleObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        document.title = titles[currentLang][id] || titles[currentLang].hero;
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+sections.forEach((s) => titleObserver.observe(s));
