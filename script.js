@@ -365,10 +365,6 @@ if (form) {
     }
   });
 }
-
-// Init with default lang
-setLang("en");
-
 //Dynamic Title
 const sections = document.querySelectorAll("section[id]");
 const titles = {
@@ -387,6 +383,9 @@ const titles = {
     contact: "İletişim",
   },
 };
+
+// Init with default lang
+setLang("en");
 
 const titleObserver = new IntersectionObserver(
   (entries) => {
