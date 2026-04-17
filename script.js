@@ -201,6 +201,15 @@ function setLang(lang) {
     const key = el.dataset.i18nPlaceholder;
     if (t[lang][key] !== undefined) el.placeholder = t[lang][key];
   });
+
+  //Dynamic Title Change with Toggle
+  const visible = [...sections].find((s) => {
+    const rect = s.getBoundingClientRect();
+    return rect.top <= window.innerHeight * 0.5 && rect.bottom >= 0;
+  });
+  if (visible) {
+    document.title = titles[lang][visible.id] || titles[lang].hero;
+  }
 }
 
 //Nav scroll
@@ -364,18 +373,18 @@ setLang("en");
 const sections = document.querySelectorAll("section[id]");
 const titles = {
   en: {
-    hero: "Burak Ege Kaya — Computer Engineer",
+    hero: "Burak Ege Kaya",
     about: "About",
     projects: "Projects",
     experience: "Experience",
     contact: "Contact",
   },
   tr: {
-    hero: "Burak Ege Kaya — Bilgisayar Mühendisi",
-    about: "Hakkımda — Burak Ege Kaya",
-    projects: "Projeler — Burak Ege Kaya",
-    experience: "Deneyim — Burak Ege Kaya",
-    contact: "İletişim — Burak Ege Kaya",
+    hero: "Burak Ege Kaya",
+    about: "Hakkımda",
+    projects: "Projeler",
+    experience: "Deneyim",
+    contact: "İletişim",
   },
 };
 
