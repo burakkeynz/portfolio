@@ -177,6 +177,7 @@ let currentLang = "en";
 
 function setLang(lang) {
   currentLang = lang;
+  localStorage.setItem("lang", lang);
   document.documentElement.lang = lang;
 
   // Update button states
@@ -203,10 +204,12 @@ function setLang(lang) {
   });
 
   //Dynamic Title Change with Toggle
-  const visible = [...sections].find((s) => {
-    const rect = s.getBoundingClientRect();
-    return rect.top <= window.innerHeight * 0.5 && rect.bottom >= 0;
-  });
+  const visible = [...sections]
+    .filter((s) => {
+      return s.getBoundingClientRect().top <= window.innerHeight * 0.6;
+    })
+    .at(-1);
+
   if (visible) {
     document.title = titles[lang][visible.id] || titles[lang].hero;
   }
@@ -384,8 +387,18 @@ const titles = {
   },
 };
 
-// Init with default lang
-setLang("en");
+// Init with default lang + scroll back to hero with f5
+history.scrollRestoration = "manual";
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  setTimeout(() => {
+    loader.classList.add("fade-out");
+    setTimeout(() => loader.remove(), 200);
+  }, 100);
+});
+
+setLang(localStorage.getItem("lang") || "en");
 
 const titleObserver = new IntersectionObserver(
   (entries) => {

@@ -940,3 +940,17 @@ footer {
     padding: 72px 0;
   }
 }
+
+/* Page loader */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 99998;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+#page-loader.fade-out {
+  opacity: 0;
+}
