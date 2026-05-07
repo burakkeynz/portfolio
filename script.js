@@ -52,6 +52,9 @@ const t = {
     exp_label: "Experience",
     exp_title_html: "Where I've been,<br><em>what I've learned.</em>",
     present: "Present",
+    exp0_role: "AI Software Developer Intern",
+    exp0_desc:
+      "Accepted as an AI Software Developer for Baykar Technologies' 2026 Summer Internship Program before graduation.",
     exp1_role: "AI Trainee — Milli Teknoloji Akademisi",
     exp1_desc:
       "Admitted to the AI Specialization Program, top 120 from 8,000+ applicants after intensive foundational screening (Data Structures, OS, DBMS). Focusing on Advanced Python, Cloud Systems, GPU Accelerators, and Parallel Programming. Capstone project under industry mentorship.",
@@ -84,6 +87,12 @@ const t = {
     form_sending: "Sending…",
     toast_success: "Message sent. I'll get back to you soon.",
     toast_error: "Something went wrong. Please try again.",
+    upcoming: "Upcoming",
+    tag_ai_engineering: "AI Engineering",
+    tag_cloud_systems: "Cloud Systems",
+    tag_gpu_parallel: "GPU / Parallel",
+    tag_ai_spec: "AI Specialization",
+    tag_data_analytics: "Data Analytics",
     footer_copy: "© 2026 · burakegekaya.com",
   },
   tr: {
@@ -136,6 +145,9 @@ const t = {
     exp_label: "Deneyim",
     exp_title_html: "Nerede bulundum,<br><em>ne öğrendim.</em>",
     present: "Günümüz",
+    exp0_role: "Yapay Zeka Yazılım Geliştirici Stajyeri",
+    exp0_desc:
+      "Mezuniyetinden önce Baykar Teknolojileri 2026 Yaz Staj Programı'na AI Software Developer olarak kabul edildi.",
     exp1_role: "Yapay Zeka Stajyeri — Milli Teknoloji Akademisi",
     exp1_desc:
       "8.000'den fazla aday arasından yoğun temel eğitim (Veri Yapıları, İşletim Sistemleri, VTYS) sonucunda seçilen 120 kişiden biri olarak AI Uzmanlık Programı'na kabul edildim. İleri Python, Bulut Sistemleri, GPU Hızlandırıcıları ve Paralel Programlama odaklı eğitim.",
@@ -168,6 +180,12 @@ const t = {
     form_sending: "Gönderiliyor…",
     toast_success: "Mesaj iletildi. En kısa sürede geri döneceğim.",
     toast_error: "Bir sorun oluştu. Lütfen tekrar deneyin.",
+    upcoming: "Yakında",
+    tag_ai_engineering: "Yapay Zeka Mühendisliği",
+    tag_cloud_systems: "Bulut Sistemleri",
+    tag_gpu_parallel: "GPU / Paralel",
+    tag_ai_spec: "AI Uzmanlığı",
+    tag_data_analytics: "Veri Analitiği",
     footer_copy: "© 2026 · burakegekaya.com",
   },
 };
