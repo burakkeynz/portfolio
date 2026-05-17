@@ -18,13 +18,12 @@
   </head>
   <body>
     <div id="page-loader"></div>
-    <!-- Toast Banner -->
+
     <div id="toast" class="toast" role="alert" aria-live="polite">
       <span id="toast-icon" class="toast-icon">✓</span>
       <span id="toast-msg"></span>
     </div>
 
-    <!-- NAV -->
     <nav id="nav">
       <div class="nav-inner">
         <a href="#hero" class="nav-logo">Burak Ege Kaya</a>
@@ -67,7 +66,7 @@
         <div class="hero-inner">
           <div>
             <div class="hero-eyebrow reveal" data-i18n="hero_eyebrow">
-              Kadıköy, Istanbul · Open to Opportunities
+              Kagithane, Istanbul · Open to Opportunities
             </div>
             <h1
               class="hero-title reveal reveal-delay-1"
@@ -111,7 +110,6 @@
               >
             </div>
           </div>
-
           <div class="hero-card reveal reveal-delay-2">
             <div class="hero-card-badge" data-i18n="hero_badge">
               Open to Opportunities
@@ -135,7 +133,7 @@
               </div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-num">5+</div>
+              <div class="hero-stat-num">7+</div>
               <div class="hero-stat-label" data-i18n="hero_stat3_label">
                 Projects Shipped
               </div>
@@ -145,7 +143,7 @@
       </div>
     </section>
 
-    <!--About and Skills-->
+    <!-- ABOUT -->
     <section id="about">
       <div class="container">
         <div class="section-label reveal" data-i18n="about_label">About</div>
@@ -163,8 +161,8 @@
               foundation gave me something most ML engineers lack: I can ship.
             </p>
             <p data-i18n-html="about_p2_html">
-              During my internship at <strong>Çizgi Teknoloji</strong>, I worked
-              alongside an AI Research Engineer who redirected my entire
+              During my internship at <strong>Çizgi Technology</strong>, I
+              worked alongside an AI Research Engineer who redirected my entire
               trajectory. The problems I found most compelling were all on the
               AI side: autonomous systems, language models, intelligent
               pipelines.
@@ -200,7 +198,13 @@
                   ><span class="skill-tag">Pandas</span>
                   <span class="skill-tag">Matplotlib</span
                   ><span class="skill-tag">Scikit-learn</span>
+                  <span class="skill-tag">XGBoost</span
+                  ><span class="skill-tag">SHAP</span>
                   <span class="skill-tag">Stable Baselines3</span
+                  ><span class="skill-tag">HuggingFace</span>
+                  <span class="skill-tag">LangChain</span
+                  ><span class="skill-tag">ChromaDB</span>
+                  <span class="skill-tag">Ollama</span
                   ><span class="skill-tag">Gemini API</span>
                   <span class="skill-tag">OpenAI API</span>
                 </div>
@@ -217,11 +221,13 @@
                 </div>
               </div>
               <div class="skill-card">
-                <div class="skill-card-label">Frontend</div>
+                <div class="skill-card-label" data-i18n="skill_frontend">
+                  Frontend
+                </div>
                 <div class="skill-tags">
                   <span class="skill-tag">React</span
-                  ><span class="skill-tag">HTML</span>
-                  <span class="skill-tag">CSS</span>
+                  ><span class="skill-tag">HTML</span
+                  ><span class="skill-tag">CSS</span>
                 </div>
               </div>
               <div class="skill-card">
@@ -291,10 +297,98 @@
         <div class="projects-grid">
           <div class="project-card featured reveal">
             <div class="project-meta">
-              <span class="project-tag">Reinforcement Learning</span>
+              <span class="project-tag" data-i18n="tag_agent">AI Agents</span>
               <span class="project-year">2025</span>
             </div>
-            <div class="project-title">Autonomous Driving via Deep RL</div>
+            <div class="project-title" data-i18n="proj_agentbench_title">
+              AgentBench-TR
+            </div>
+            <p class="project-desc" data-i18n="proj_agentbench_desc">
+              4-agent LangGraph pipeline with hybrid BM25 and ChromaDB retrieval
+              using Reciprocal Rank Fusion. Claim-level hallucination detection
+              in the ValidatorAgent and automatic retry loop on low-confidence
+              answers. Evaluation layer tracking consistency, hallucination
+              rate, cost and latency per trace, exposed through a FastAPI
+              backend and Plotly Dash dashboard.
+            </p>
+            <div class="project-stack">
+              <span class="stack-item">LangGraph</span
+              ><span class="stack-item">ChromaDB</span>
+              <span class="stack-item">FastAPI</span
+              ><span class="stack-item">Plotly Dash</span>
+              <span class="stack-item">BM25</span>
+            </div>
+            <a
+              href="https://github.com/burakkeynz"
+              target="_blank"
+              class="project-link"
+            >
+              <span data-i18n="proj_github_link">View on GitHub</span>
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path
+                  d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-meta">
+              <span class="project-tag" data-i18n="tag_ml"
+                >Machine Learning</span
+              >
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-title" data-i18n="proj_aeroguard_title">
+              AeroGuard
+            </div>
+            <p class="project-desc" data-i18n="proj_aeroguard_desc">
+              End-to-end ML pipeline on the NASA CMAPSS dataset to predict
+              Remaining Useful Life of turbofan engines. Engineered temporal
+              features over 5–20 cycle windows, benchmarked five models,
+              achieved RMSE of 1.50 with Random Forest. Applied SHAP
+              TreeExplainer for global and local interpretability and built a
+              three-tier early warning system.
+            </p>
+            <div class="project-stack">
+              <span class="stack-item">Python</span
+              ><span class="stack-item">Scikit-learn</span>
+              <span class="stack-item">XGBoost</span
+              ><span class="stack-item">SHAP</span>
+              <span class="stack-item">Plotly</span>
+            </div>
+            <a
+              href="https://github.com/burakkeynz"
+              target="_blank"
+              class="project-link"
+            >
+              <span data-i18n="proj_github_link">View on GitHub</span>
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path
+                  d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-meta">
+              <span class="project-tag" data-i18n="tag_rl"
+                >Reinforcement Learning</span
+              >
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-title" data-i18n="proj1_title">
+              Autonomous Driving via Deep RL
+            </div>
             <p class="project-desc" data-i18n="proj1_desc">
               DQN and SAC algorithms across four simulation environments
               (Highway, Merge, Roundabout, Racetrack). Reward functions
@@ -327,12 +421,16 @@
             </a>
           </div>
 
-          <div class="project-card reveal reveal-delay-1">
+          <div class="project-card reveal">
             <div class="project-meta">
-              <span class="project-tag">Full Stack · AI</span
-              ><span class="project-year">2025</span>
+              <span class="project-tag" data-i18n="tag_fullstack_ai"
+                >Full Stack · AI</span
+              >
+              <span class="project-year">2025</span>
             </div>
-            <div class="project-title">Hospital Panel System</div>
+            <div class="project-title" data-i18n="proj2_title">
+              Hospital Panel System
+            </div>
             <p class="project-desc" data-i18n="proj2_desc">
               Real-time hospital communication platform, full-stack owner across
               all modules. React/Redux + FastAPI, Socket.IO, WebRTC, Gemini 2.5
@@ -359,17 +457,19 @@
                   stroke-width="1.3"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                /></svg
-            ></a>
+                />
+              </svg>
+            </a>
           </div>
 
-          <div class="project-card reveal reveal-delay-2">
+          <div class="project-card reveal reveal-delay-1">
             <div class="project-meta">
               <span class="project-tag" data-i18n="tag_deployed"
                 >Deployed Product</span
-              ><span class="project-year">2025</span>
+              >
+              <span class="project-year">2025</span>
             </div>
-            <div class="project-title">Chovora</div>
+            <div class="project-title" data-i18n="proj3_title">Chovora</div>
             <p class="project-desc" data-i18n="proj3_desc">
               Full technical ownership in a cross-functional team. JWT auth,
               dynamic cart, admin dashboard. Deployed on Render &amp; Vercel,
@@ -390,16 +490,21 @@
                   stroke-width="1.3"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                /></svg
-            ></a>
+                />
+              </svg>
+            </a>
           </div>
 
-          <div class="project-card reveal">
+          <div class="project-card reveal reveal-delay-2">
             <div class="project-meta">
-              <span class="project-tag">Mobile · AI</span
-              ><span class="project-year">2024</span>
+              <span class="project-tag" data-i18n="tag_mobile_ai"
+                >Mobile · AI</span
+              >
+              <span class="project-year">2024</span>
             </div>
-            <div class="project-title">Android Chat App</div>
+            <div class="project-title" data-i18n="proj4_title">
+              Android Chat App
+            </div>
             <p class="project-desc" data-i18n="proj4_desc">
               Android chat application integrating OpenAI API (ChatGPT) for
               real-time conversation. Developed all activity classes:
@@ -411,39 +516,6 @@
               ><span class="stack-item">Android Studio</span
               ><span class="stack-item">OpenAI API</span>
             </div>
-          </div>
-
-          <div class="project-card reveal reveal-delay-1">
-            <div class="project-meta">
-              <span class="project-tag">Full Stack</span
-              ><span class="project-year">2025</span>
-            </div>
-            <div class="project-title">Todo Web App</div>
-            <p class="project-desc" data-i18n="proj5_desc">
-              Independent full-stack task manager: auth, CRUD, image upload,
-              fully responsive. React frontend, FastAPI backend, MySQL, JWT
-              authentication.
-            </p>
-            <div class="project-stack">
-              <span class="stack-item">React</span
-              ><span class="stack-item">FastAPI</span>
-              <span class="stack-item">MySQL</span
-              ><span class="stack-item">JWT</span>
-            </div>
-            <a
-              href="https://github.com/burakkeynz/TodoApp"
-              target="_blank"
-              class="project-link"
-              >GitHub
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                <path
-                  d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11"
-                  stroke="currentColor"
-                  stroke-width="1.3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                /></svg
-            ></a>
           </div>
         </div>
       </div>
@@ -465,8 +537,9 @@
               <div class="timeline-date">
                 Jun — Jul 2026 (<span data-i18n="upcoming">Upcoming</span>)
               </div>
-
-              <div class="timeline-org">Baykar Technologies</div>
+              <div class="timeline-org" data-i18n="org_baykar">
+                Baykar Technologies
+              </div>
             </div>
             <div class="timeline-right">
               <div class="timeline-role" data-i18n="exp0_role">
@@ -483,12 +556,13 @@
               </div>
             </div>
           </div>
+
           <div class="timeline-item reveal">
             <div class="timeline-left">
               <div class="timeline-date">
                 Jan 2026 — <span data-i18n="present">Present</span>
               </div>
-              <div class="timeline-org">
+              <div class="timeline-org" data-i18n="org_ministry">
                 Ministry of Industry &amp; Technology
               </div>
             </div>
@@ -523,19 +597,23 @@
               <div class="timeline-date">
                 Dec 2025 — <span data-i18n="present">Present</span>
               </div>
-              <div class="timeline-org">Yapay Zeka ve Teknoloji Akademisi</div>
+              <div class="timeline-org" data-i18n="org_yapay_zeka">
+                Yapay Zeka ve Teknoloji Akademisi
+              </div>
             </div>
             <div class="timeline-right">
               <div class="timeline-role" data-i18n="exp2_role">AI Trainee</div>
               <p class="timeline-desc" data-i18n="exp2_desc">
                 Selected as one of 1,500 participants from 31,700 applicants.
                 National AI program supported by Ministry of Industry and
-                Technology, Google Türkiye, and T3 Foundation.
+                Technology, Google Turkey, and T3 Foundation. Collaborating on
+                AI-driven initiatives within a competitive ecosystem focusing on
+                large-scale tech integration.
               </p>
               <div class="timeline-tags">
-                <span class="timeline-tag">Google Türkiye</span
-                ><span class="timeline-tag">T3 Foundation</span
-                ><span class="timeline-tag">AI Projects</span>
+                <span class="timeline-tag">Google Türkiye</span>
+                <span class="timeline-tag">T3 Foundation</span>
+                <span class="timeline-tag">AI Projects</span>
               </div>
             </div>
           </div>
@@ -543,7 +621,9 @@
           <div class="timeline-item reveal">
             <div class="timeline-left">
               <div class="timeline-date">Jul — Aug 2025</div>
-              <div class="timeline-org">Çizgi Teknoloji</div>
+              <div class="timeline-org" data-i18n="org_cizgi">
+                Çizgi Technology
+              </div>
             </div>
             <div class="timeline-right">
               <div class="timeline-role" data-i18n="exp3_role">
@@ -568,20 +648,21 @@
           <div class="timeline-item reveal">
             <div class="timeline-left">
               <div class="timeline-date">Jul — Sep 2024</div>
-              <div class="timeline-org">Kaan Havalı Kırıcı Makina</div>
+              <div class="timeline-org" data-i18n="org_kaan">Kaan Makina</div>
             </div>
             <div class="timeline-right">
               <div class="timeline-role" data-i18n="exp4_role">
                 Data Analyst Intern
               </div>
               <p class="timeline-desc" data-i18n="exp4_desc">
-                Used Python's Pandas, Matplotlib and NumPy to generate plots of
-                company data. Created SQL tables from MySQL Workbench. Worked on
-                HTML, CSS and JavaScript for internal web interfaces.
+                Optimized Python/Django backend logic for faster data handling.
+                Generated visual analytics dashboards with Pandas, NumPy and
+                Matplotlib to monitor production efficiency. Used Watchdog
+                library to track file changes and update database.
               </p>
               <div class="timeline-tags">
-                <span class="timeline-tag">Python</span>
-                <span class="timeline-tag">Django</span>
+                <span class="timeline-tag">Python</span
+                ><span class="timeline-tag">Django</span>
                 <span class="timeline-tag">Pandas</span>
                 <span class="timeline-tag" data-i18n="tag_data_analytics"
                   >Data Analytics</span
@@ -595,7 +676,9 @@
               <div class="timeline-date">
                 2022 — <span data-i18n="present">Present</span>
               </div>
-              <div class="timeline-org">Bahçeşehir University</div>
+              <div class="timeline-org" data-i18n="org_bau">
+                Bahçeşehir University
+              </div>
             </div>
             <div class="timeline-right">
               <div class="timeline-role" data-i18n="exp5_role">
@@ -611,8 +694,12 @@
                 <span class="timeline-tag" data-i18n="tag_doublemajor"
                   >Double Major</span
                 >
-                <span class="timeline-tag">GPA 3.14 / 3.43</span>
-                <span class="timeline-tag">Capstone: NLP</span>
+                <span class="timeline-tag" data-i18n="tag_gpa"
+                  >GPA 3.14 / 3.43</span
+                >
+                <span class="timeline-tag" data-i18n="tag_capstone"
+                  >Capstone: NLP</span
+                >
               </div>
             </div>
           </div>
@@ -678,7 +765,6 @@
                   />
                 </svg>
               </a>
-
               <a
                 href="https://github.com/burakkeynz"
                 target="_blank"
@@ -712,7 +798,6 @@
                   />
                 </svg>
               </a>
-
               <a
                 href="mailto:burak.kaya3@bahcesehir.edu.tr"
                 class="contact-link"
@@ -765,13 +850,11 @@
               </a>
             </div>
           </div>
-
           <div class="reveal reveal-delay-1">
             <p class="form-section-title" data-i18n="form_title">
               Send a Message
             </p>
             <form class="contact-form" id="contact-form" novalidate>
-              <!-- Spam honeypot: botlar doldurur, insanlar doldurmaz -->
               <input
                 type="text"
                 name="_honey"

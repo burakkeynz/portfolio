@@ -5,7 +5,7 @@ const t = {
     nav_projects: "Projects",
     nav_experience: "Experience",
     nav_contact: "Contact",
-    hero_eyebrow: "Kadikoy, Istanbul · Open to Opportunities",
+    hero_eyebrow: "Kagithane, Istanbul · Open to Opportunities",
     hero_title_html: "Full-stack roots.<br><em>AI/ML destination.</em>",
     hero_bio_html:
       "I started by <strong>building products</strong>: deployed full-stack apps, real-time systems, mobile apps. Then, during an internship, a mentor showed me the AI side. I never looked back. Now I am an <strong>AI Engineering trainee</strong> (top 120 from 8,000+ applicants), building RL agents, completing an NLP capstone on Turkish dialogue, and I can still ship the backend.",
@@ -24,13 +24,13 @@ const t = {
     about_p1_html:
       "I started as a <strong>full-stack developer</strong>: building real products, learning how systems work end-to-end. That foundation gave me something most ML engineers lack: I can ship.",
     about_p2_html:
-      "During my internship at <strong>Çizgi Teknoloji</strong>, I worked alongside an AI Research Engineer who redirected my entire trajectory. The problems I found most compelling were all on the AI side: autonomous systems, language models, intelligent pipelines.",
+      "During my internship at <strong>Çizgi Technology</strong>, I worked alongside an AI Research Engineer who redirected my entire trajectory. The problems I found most compelling were all on the AI side: autonomous systems, language models, intelligent pipelines.",
     about_p3_html:
       "I am a <strong>double major</strong> at Bahçeşehir University (Computer Engineering + Management Engineering), advancing through two competitive national AI programs, and looking for a team where I can contribute to real AI/ML work.",
     skills_header: "Skills & Technologies",
-    skills_note: "↗ currently learning",
     skill_ai: "AI & Data",
     skill_lang: "Languages",
+    skill_frontend: "Frontend",
     skill_backend: "Backend & DB",
     skill_devops: "DevOps, Realtime & Tools",
     projects_label: "Projects",
@@ -38,20 +38,44 @@ const t = {
       "Things I've built,<br><em>broken, and learned from.</em>",
     github_all: "All on GitHub",
     proj_github_link: "View on GitHub",
+    tag_rl: "Reinforcement Learning",
+    tag_fullstack_ai: "Full Stack · AI",
+    tag_fullstack: "Full Stack",
+    tag_mobile_ai: "Mobile · AI",
+    tag_agent: "AI Agents",
+    tag_ml: "Machine Learning",
+    tag_deployed: "Deployed Product",
+    proj_agentbench_title: "AgentBench-TR",
+    proj_agentbench_desc:
+      "4-agent LangGraph pipeline with hybrid BM25 and ChromaDB retrieval using Reciprocal Rank Fusion. Claim-level hallucination detection in the ValidatorAgent and automatic retry loop on low-confidence answers. Evaluation layer tracking consistency, hallucination rate, cost and latency per trace, exposed through a FastAPI backend and Plotly Dash dashboard.",
+    proj_aeroguard_title: "AeroGuard",
+    proj_aeroguard_desc:
+      "End-to-end ML pipeline on the NASA CMAPSS dataset to predict Remaining Useful Life of turbofan engines. Engineered temporal features over 5–20 cycle windows, benchmarked five models, achieved RMSE of 1.50 with Random Forest. Applied SHAP TreeExplainer for global and local interpretability and built a three-tier early warning system.",
+    proj1_title: "Autonomous Driving via Deep RL",
     proj1_desc:
       "DQN and SAC algorithms across four simulation environments (Highway, Merge, Roundabout, Racetrack). Reward functions optimized for a zero-collision policy, high-speed navigation and strategic merging.",
+    proj2_title: "Hospital Panel System",
     proj2_desc:
       "Real-time hospital communication platform, full-stack owner across all modules. React/Redux + FastAPI, Socket.IO, WebRTC, Gemini 2.5 AI assistant, live speech-to-text via AudioWorklet (48→16 kHz + VAD), JWT auth, AWS S3, encrypted PDF exports.",
+    proj3_title: "Chovora",
     proj3_desc:
       "Full technical ownership in a cross-functional team. JWT auth, dynamic cart, admin dashboard. Deployed on Render & Vercel, iterated on UX alongside non-technical teammates.",
+    proj4_title: "Android Chat App",
     proj4_desc:
       "Android chat application integrating OpenAI API (ChatGPT) for real-time conversation. Developed all activity classes: MainActivity, User, UI and logic layers, focusing on API bindings and data flow.",
+    proj5_title: "Todo Web App",
     proj5_desc:
       "Independent full-stack task manager: auth, CRUD, image upload, fully responsive. React frontend, FastAPI backend, MySQL, JWT authentication.",
-    tag_deployed: "Deployed Product",
     exp_label: "Experience",
     exp_title_html: "Where I've been,<br><em>what I've learned.</em>",
     present: "Present",
+    upcoming: "Upcoming",
+    org_baykar: "Baykar Technologies",
+    org_ministry: "Ministry of Industry & Technology",
+    org_yapay_zeka: "Yapay Zeka ve Teknoloji Akademisi",
+    org_cizgi: "Çizgi Technology",
+    org_kaan: "Kaan Makina",
+    org_bau: "Bahçeşehir University",
     exp0_role: "AI Software Developer Intern",
     exp0_desc:
       "Accepted as an AI Software Developer for Baykar Technologies' 2026 Summer Internship Program before graduation.",
@@ -60,17 +84,24 @@ const t = {
       "Admitted to the AI Specialization Program, top 120 from 8,000+ applicants after intensive foundational screening (Data Structures, OS, DBMS). Focusing on Advanced Python, Cloud Systems, GPU Accelerators, and Parallel Programming. Capstone project under industry mentorship.",
     exp2_role: "AI Trainee",
     exp2_desc:
-      "Selected as one of 1,500 participants from 31,700 applicants. National AI program supported by Ministry of Industry and Technology, Google Türkiye, and T3 Foundation.",
+      "Selected as one of 1,500 participants from 31,700 applicants. National AI program supported by Ministry of Industry and Technology, Google Turkey, and T3 Foundation. Collaborating on AI-driven initiatives within a competitive ecosystem focusing on large-scale tech integration.",
     exp3_role: "Software Development Intern",
     exp3_desc:
       "Built a full-fledged hospital communication panel under senior R&D mentorship. Real-time features with React, FastAPI, WebRTC, Socket.IO. Integrated Gemini 2.5 with live audio transcription (AudioWorklet, VAD). Delivered a production-ready demo.",
     exp4_role: "Data Analyst Intern",
     exp4_desc:
-      "Used Python's Pandas, Matplotlib and NumPy to generate plots of company data. Created SQL tables from MySQL Workbench. Worked on HTML, CSS and JavaScript for internal web interfaces.",
+      "Optimized Python/Django backend logic for faster data handling. Generated visual analytics dashboards with Pandas, NumPy and Matplotlib to monitor production efficiency. Used Watchdog library to track file changes and update database.",
     exp5_role: "BSc Computer Engineering + Management Engineering",
     exp5_desc:
       "Double major: technical depth in CE (GPA 3.14) with systems thinking from ME (GPA 3.43). Capstone: Turkish dialogue NLP with BERTurk + Whisper. Core team member, BAU Management Engineering Club.",
     tag_doublemajor: "Double Major",
+    tag_gpa: "GPA 3.14 / 3.43",
+    tag_capstone: "Capstone: NLP",
+    tag_ai_engineering: "AI Engineering",
+    tag_cloud_systems: "Cloud Systems",
+    tag_gpu_parallel: "GPU / Parallel",
+    tag_ai_spec: "AI Specialization",
+    tag_data_analytics: "Data Analytics",
     contact_label: "Contact",
     contact_title_html: "Let's build<br><em>something together.</em>",
     contact_desc:
@@ -87,12 +118,6 @@ const t = {
     form_sending: "Sending…",
     toast_success: "Message sent. I'll get back to you soon.",
     toast_error: "Something went wrong. Please try again.",
-    upcoming: "Upcoming",
-    tag_ai_engineering: "AI Engineering",
-    tag_cloud_systems: "Cloud Systems",
-    tag_gpu_parallel: "GPU / Parallel",
-    tag_ai_spec: "AI Specialization",
-    tag_data_analytics: "Data Analytics",
     footer_copy: "© 2026 · burakegekaya.com",
   },
   tr: {
@@ -100,7 +125,7 @@ const t = {
     nav_projects: "Projeler",
     nav_experience: "Deneyim",
     nav_contact: "İletişim",
-    hero_eyebrow: "Kadıköy, İstanbul · Fırsatlara Açık",
+    hero_eyebrow: "Kağıthane, İstanbul · Fırsatlara Açık",
     hero_title_html: "Full-stack kökenli.<br><em>AI/ML odaklı.</em>",
     hero_bio_html:
       "<strong>Ürün geliştirerek</strong> başladım: full-stack uygulamalar, gerçek zamanlı sistemler, mobil projeler. Stajımda bir mentor bana AI tarafını gösterdi. Bir daha geriye bakmadım. Şu an 8.000'den fazla aday arasından seçilen 120 kişiden biri olarak <strong>AI Engineering stajyeriyim</strong>; RL ajanları geliştiriyor, Türkçe diyalog üzerine bir NLP bitirme projesi tamamlıyor ve hâlâ backend yazabiliyorum.",
@@ -122,48 +147,79 @@ const t = {
     about_p3_html:
       "Bahçeşehir Üniversitesi'nde <strong>çift anadal</strong> öğrencisiyim (Bilgisayar Mühendisliği + İşletme Mühendisliği). İki ulusal AI programında ilerliyorum ve gerçek AI/ML çalışmalarına katkı sağlayabileceğim bir ekip arıyorum.",
     skills_header: "Beceriler ve Teknolojiler",
-    skills_note: "↗ öğreniyorum",
     skill_ai: "Yapay Zeka & Veri",
     skill_lang: "Programlama Dilleri",
+    skill_frontend: "Arayüz",
     skill_backend: "Backend & Veri Tabanı",
     skill_devops: "DevOps, Gerçek Zamanlı & Araçlar",
     projects_label: "Projeler",
     projects_title_html: "İnşa ettiğim,<br><em>bozup öğrendiğim şeyler.</em>",
     github_all: "GitHub'da Hepsi",
     proj_github_link: "GitHub'da Gör",
+    tag_rl: "Pekiştirmeli Öğrenme",
+    tag_fullstack_ai: "Full Stack · YZ",
+    tag_fullstack: "Full Stack",
+    tag_mobile_ai: "Mobil · YZ",
+    tag_agent: "YZ Ajanları",
+    tag_ml: "Makine Öğrenmesi",
+    tag_deployed: "Canlıya Alındı",
+    proj_agentbench_title: "AgentBench-TR",
+    proj_agentbench_desc:
+      "Karşılıklı Sıra Füzyonu ile hibrit BM25 ve ChromaDB erişimi kullanan 4-ajanlı LangGraph pipeline'ı. ValidatorAgent'ta iddia düzeyinde hallüsinasyon tespiti ve düşük güvenlikli yanıtlar için otomatik yeniden deneme döngüsü. FastAPI backend ve Plotly Dash panosu üzerinden izleme katmanı.",
+    proj_aeroguard_title: "AeroGuard",
+    proj_aeroguard_desc:
+      "NASA CMAPSS veri setinde turbofan motorların Kalan Kullanım Ömrünü tahmin eden uçtan uca ML pipeline'ı. 5-20 döngülük pencereler üzerinde temporal özellik mühendisliği, beş model kıyaslaması, Random Forest ile RMSE 1.50. SHAP TreeExplainer ile yorumlanabilirlik ve üç kademeli erken uyarı sistemi.",
+    proj1_title: "Derin RL ile Otonom Sürüş",
     proj1_desc:
       "Dört farklı simülasyon ortamında (Highway, Merge, Roundabout, Racetrack) DQN ve SAC algoritmaları ile otonom sürüş ajanları geliştirildi. Sıfır çarpışma politikası, yüksek hızda navigasyon ve stratejik birleşme için ödül fonksiyonları optimize edildi.",
+    proj2_title: "Hastane Panel Sistemi",
     proj2_desc:
       "Gerçek zamanlı hastane iletişim platformu; tüm modüllerin tam teknik sahibi. React/Redux + FastAPI, Socket.IO, WebRTC, Gemini 2.5 AI asistan, AudioWorklet ile canlı konuşma metni (48→16 kHz + VAD), JWT kimlik doğrulama, AWS S3, şifreli PDF.",
+    proj3_title: "Chovora",
     proj3_desc:
       "Çok disiplinli bir ekipte tam teknik sahiplik. JWT kimlik doğrulama, dinamik sepet, yönetici paneli. Render & Vercel'de yayına alındı, teknik olmayan ekip arkadaşlarıyla birlikte UX üzerinde iterasyon yapıldı.",
+    proj4_title: "Android Sohbet Uygulaması",
     proj4_desc:
       "OpenAI API entegrasyonlu Android sohbet uygulaması. Tüm aktivite sınıfları kişisel olarak geliştirildi: MainActivity, User, UI ve mantık katmanları.",
+    proj5_title: "Todo Web Uygulaması",
     proj5_desc:
       "Bağımsız geliştirilen full-stack görev yöneticisi: kimlik doğrulama, CRUD, görsel yükleme, tam responsive. React frontend, FastAPI backend, MySQL, JWT.",
-    tag_deployed: "Canlıya Alındı",
     exp_label: "Deneyim",
     exp_title_html: "Nerede bulundum,<br><em>ne öğrendim.</em>",
     present: "Günümüz",
+    upcoming: "Yakında",
+    org_baykar: "Baykar Teknoloji",
+    org_ministry: "Sanayi ve Teknoloji Bakanlığı",
+    org_yapay_zeka: "Yapay Zeka ve Teknoloji Akademisi",
+    org_cizgi: "Çizgi Teknoloji",
+    org_kaan: "Kaan Makina",
+    org_bau: "Bahçeşehir Üniversitesi",
     exp0_role: "Yapay Zeka Yazılım Geliştirici Stajyeri",
     exp0_desc:
-      "Mezuniyetinden önce Baykar Teknolojileri 2026 Yaz Staj Programı'na AI Software Developer olarak kabul edildi.",
+      "Mezuniyetinden önce Baykar Teknoloji 2026 Yaz Staj Programı'na AI Software Developer olarak kabul edildi.",
     exp1_role: "Yapay Zeka Stajyeri — Milli Teknoloji Akademisi",
     exp1_desc:
       "8.000'den fazla aday arasından yoğun temel eğitim (Veri Yapıları, İşletim Sistemleri, VTYS) sonucunda seçilen 120 kişiden biri olarak AI Uzmanlık Programı'na kabul edildim. İleri Python, Bulut Sistemleri, GPU Hızlandırıcıları ve Paralel Programlama odaklı eğitim.",
     exp2_role: "Yapay Zeka Stajyeri",
     exp2_desc:
-      "31.700 başvuru arasından 1.500 katılımcıdan biri olarak seçildim. Sanayi ve Teknoloji Bakanlığı, Google Türkiye ve T3 Vakfı destekli ulusal AI programı.",
+      "31.700 başvuru arasından 1.500 katılımcıdan biri olarak seçildim. Sanayi ve Teknoloji Bakanlığı, Google Türkiye ve T3 Vakfı destekli ulusal AI programı. Büyük ölçekli teknoloji entegrasyonuna odaklanan rekabetçi bir ekosistemde AI odaklı girişimlerde işbirliği yapılıyor.",
     exp3_role: "Yazılım Geliştirme Stajyeri",
     exp3_desc:
       "Kıdemli Ar-Ge mentorluğunda tam kapsamlı hastane iletişim paneli geliştirdim. React, FastAPI, WebRTC, Socket.IO ile gerçek zamanlı özellikler. Gemini 2.5 entegrasyonu ve AudioWorklet ile canlı ses transkripsiyonu.",
     exp4_role: "Veri Analisti Stajyeri",
     exp4_desc:
-      "Python'ın Pandas, Matplotlib ve NumPy kütüphaneleri ile şirket verilerinin grafikleri oluşturuldu. MySQL Workbench üzerinde SQL tabloları kuruldu. Dahili web arayüzlerinde HTML, CSS ve JavaScript ile çalışıldı.",
+      "Daha hızlı veri işleme için Python/Django backend mantığı optimize edildi. Üretim verimliliğini izlemek amacıyla Pandas, NumPy ve Matplotlib ile görsel analiz panoları oluşturuldu. Dosya değişikliklerini izlemek için Watchdog kütüphanesi kullanıldı.",
     exp5_role: "Bilgisayar Mühendisliği + İşletme Mühendisliği (Çift Anadal)",
     exp5_desc:
       "Teknik derinlik: Bilgisayar Mühendisliği (GPA 3,14); sistem düşüncesi: İşletme Mühendisliği (GPA 3,43). Bitirme projesi: BERTurk + Whisper ile Türkçe diyalog NLP. BAU İşletme Mühendisliği Kulübü çekirdek ekibi.",
     tag_doublemajor: "Çift Anadal",
+    tag_gpa: "GPA 3.14 / 3.43",
+    tag_capstone: "Bitirme: NLP",
+    tag_ai_engineering: "Yapay Zeka Mühendisliği",
+    tag_cloud_systems: "Bulut Sistemleri",
+    tag_gpu_parallel: "GPU / Paralel",
+    tag_ai_spec: "AI Uzmanlığı",
+    tag_data_analytics: "Veri Analitiği",
     contact_label: "İletişim",
     contact_title_html: "Birlikte bir şeyler<br><em>inşa edelim.</em>",
     contact_desc:
@@ -180,17 +236,10 @@ const t = {
     form_sending: "Gönderiliyor…",
     toast_success: "Mesaj iletildi. En kısa sürede geri döneceğim.",
     toast_error: "Bir sorun oluştu. Lütfen tekrar deneyin.",
-    upcoming: "Yakında",
-    tag_ai_engineering: "Yapay Zeka Mühendisliği",
-    tag_cloud_systems: "Bulut Sistemleri",
-    tag_gpu_parallel: "GPU / Paralel",
-    tag_ai_spec: "AI Uzmanlığı",
-    tag_data_analytics: "Veri Analitiği",
     footer_copy: "© 2026 · burakegekaya.com",
   },
 };
 
-// Lang
 let currentLang = "en";
 
 function setLang(lang) {
@@ -198,42 +247,30 @@ function setLang(lang) {
   localStorage.setItem("lang", lang);
   document.documentElement.lang = lang;
 
-  // Update button states
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
-
-  // textContent elements
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
     if (t[lang][key] !== undefined) el.textContent = t[lang][key];
   });
-
-  // innerHTML elements (contain HTML tags)
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const key = el.dataset.i18nHtml;
     if (t[lang][key] !== undefined) el.innerHTML = t[lang][key];
   });
-
-  // placeholder elements
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const key = el.dataset.i18nPlaceholder;
     if (t[lang][key] !== undefined) el.placeholder = t[lang][key];
   });
 
-  //Dynamic Title Change with Toggle
   const visible = [...sections]
-    .filter((s) => {
-      return s.getBoundingClientRect().top <= window.innerHeight * 0.6;
-    })
+    .filter((s) => s.getBoundingClientRect().top <= window.innerHeight * 0.6)
     .at(-1);
-
   if (visible) {
     document.title = titles[lang][visible.id] || titles[lang].hero;
   }
 }
 
-//Nav scroll
 const nav = document.getElementById("nav");
 window.addEventListener(
   "scroll",
@@ -243,7 +280,6 @@ window.addEventListener(
   { passive: true }
 );
 
-//Scroll reveal w observer
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -255,38 +291,25 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
 );
-
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 document
   .querySelectorAll("#hero .reveal")
   .forEach((el) => el.classList.add("visible"));
 
-//Toast
 function showToast(type) {
   const toast = document.getElementById("toast");
   const msg = document.getElementById("toast-msg");
   const icon = document.getElementById("toast-icon");
   const key = type === "success" ? "toast_success" : "toast_error";
-
   msg.textContent = t[currentLang][key];
   icon.textContent = type === "success" ? "✓" : "✕";
   toast.className = `toast${type === "error" ? " error" : ""}`;
-
-  // show
-  requestAnimationFrame(() => {
-    toast.classList.add("visible");
-  });
-
-  // auto-hide after 4s
-  setTimeout(() => {
-    toast.classList.remove("visible");
-  }, 4000);
+  requestAnimationFrame(() => toast.classList.add("visible"));
+  setTimeout(() => toast.classList.remove("visible"), 4000);
 }
 
-// Contact form
-// Rate limit: max 3 submissions per 24h per browser (localStorage)
 const RATE_LIMIT = 3;
-const RATE_WINDOW = 24 * 60 * 60 * 1000; // 24 saat ms
+const RATE_WINDOW = 24 * 60 * 60 * 1000;
 const LS_KEY = "portfolio_submissions";
 
 function getSubmissions() {
@@ -298,7 +321,6 @@ function getSubmissions() {
     return [];
   }
 }
-
 function recordSubmission() {
   const list = getSubmissions();
   list.push(Date.now());
@@ -306,12 +328,10 @@ function recordSubmission() {
     localStorage.setItem(LS_KEY, JSON.stringify(list));
   } catch {}
 }
-
 function isRateLimited() {
   return getSubmissions().length >= RATE_LIMIT;
 }
 
-// Web3Forms
 const WEB3FORMS_KEY = "33c589ba-2ab5-4230-895d-26ab6bd1449c";
 const FORMSPREE_URL = "https://api.web3forms.com/submit";
 
@@ -321,7 +341,6 @@ const submitLabel = document.getElementById("submit-label");
 const submitArrow = document.getElementById("submit-arrow");
 const submitSpinner = document.getElementById("submit-spinner");
 
-// Rate limit
 if (form && isRateLimited()) {
   submitBtn.disabled = true;
   submitLabel.textContent = "—";
@@ -331,10 +350,8 @@ if (form && isRateLimited()) {
 if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const honey = form.querySelector('[name="_honey"]').value;
     if (honey) return;
-
     if (isRateLimited()) {
       showToast("error");
       return;
@@ -365,9 +382,7 @@ if (form) {
           subject: "Portfolio Contact: " + name,
         }),
       });
-
       const data = await res.json();
-
       if (res.ok) {
         recordSubmission();
         showToast("success");
@@ -386,26 +401,25 @@ if (form) {
     }
   });
 }
-//Dynamic Title
+
 const sections = document.querySelectorAll("section[id]");
 const titles = {
   en: {
-    hero: "Burak Ege Kaya",
-    about: "About",
-    projects: "Projects",
-    experience: "Experience",
-    contact: "Contact",
+    hero: "Burak Ege Kaya — AI/ML Engineer",
+    about: "About — Burak Ege Kaya",
+    projects: "Projects — Burak Ege Kaya",
+    experience: "Experience — Burak Ege Kaya",
+    contact: "Contact — Burak Ege Kaya",
   },
   tr: {
-    hero: "Burak Ege Kaya",
-    about: "Hakkımda",
-    projects: "Projeler",
-    experience: "Deneyim",
-    contact: "İletişim",
+    hero: "Burak Ege Kaya — AI/ML Mühendisi",
+    about: "Hakkımda — Burak Ege Kaya",
+    projects: "Projeler — Burak Ege Kaya",
+    experience: "Deneyim — Burak Ege Kaya",
+    contact: "İletişim — Burak Ege Kaya",
   },
 };
 
-// Init with default lang + scroll back to hero with f5
 history.scrollRestoration = "manual";
 
 window.addEventListener("load", () => {
@@ -429,5 +443,4 @@ const titleObserver = new IntersectionObserver(
   },
   { threshold: 0.3 }
 );
-
 sections.forEach((s) => titleObserver.observe(s));
